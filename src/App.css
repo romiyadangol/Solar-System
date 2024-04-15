@@ -6,13 +6,22 @@
     transform: rotate(360deg);
   }
 }
-.sun-image {
+.img-wrapper{
+ display: flex;
+  justify-content: space-between;
+  
+
+}
+.mercury-image {
+  width: 200px;
+  height: 200px;
   animation: rotate 20s linear infinite;
 }
 
-.img-wrapper{
+.mercury-wrapper{
   width: 250px;
 }
+
 h1{
   color: aliceblue;
 }
@@ -80,7 +89,7 @@ img{
   cursor: pointer;
   width: 160px;
 }
-.upgrade-clicks-icon {
+.upgrade-click-icon {
   width: 50px;
   height: 50px;
 }
@@ -88,7 +97,7 @@ img{
 .name {
   color: white;
   font-size: 18px;
-  margin: 0;
+  margin-left: 12px;
 }
 
 .name h2{
@@ -101,3 +110,12 @@ img{
   font-size: 12px;
   margin: 0;
 }
+.planet{
+  margin-top: 20px;
+}
+.sun-img{
+  width: 100px;
+  height: 100px;
+  animation: rotate 20s linear infinite;
+}
+
