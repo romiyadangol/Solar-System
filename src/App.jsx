@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 600,
+      counter: 0,
       isMultiplierActive: false,
       multiplierCost: 100,
       planets: {
@@ -78,16 +78,14 @@ class App extends React.Component {
           <h1>Solar Energy : {this.state.counter}</h1>
           <div className="container">
             <div className="img-wrapper">
+            <div className="sun-wrapper">
+                <img src={Sun} className="sun-image" onClick={this.handleClick}/>
+              </div>
               <div className="mercury-wrapper">
                 <img
                   src={Mercury}
                   className="mercury-image"
-                  onClick={this.handleClick}
-                  alt="Sun"
                 />
-              </div>
-              <div className="sun-wrapper">
-                <img src={Sun} className="sun-image" />
               </div>
             </div>
           </div>
@@ -96,11 +94,10 @@ class App extends React.Component {
         <div className="store">
           <h1>Shop</h1>
           <div className="multiply">
-            <button type="button" className="upgrade">
+            <button type="button" className="upgrade"  onClick={this.handleClickMultiply}>
               <img
                 src={Pointer}
                 className="upgrade-click-icon"
-                onClick={this.handleClickMultiply}
               />
               <div className="name">
                 <h2>Multiple</h2>

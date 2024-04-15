@@ -6,13 +6,39 @@
     transform: rotate(360deg);
   }
 }
-.img-wrapper{
- display: flex;
-  justify-content: space-between;
-  
 
+.img-wrapper {
+  display: flex;
+  position: relative;
+}
+/* .img-wrapper{
+  display: flex;
+   justify-content: space-between;
+ } */
+.sun-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  animation: rotate 50s linear infinite;
+}
+
+.mercury-wrapper {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 20s linear infinite;
+  transform-origin: -20% 40%;
 }
 .mercury-image {
+  width: 90px;
+  height: 90px;
+}
+/* .mercury-image {
   width: 200px;
   height: 200px;
   animation: rotate 20s linear infinite;
@@ -20,21 +46,25 @@
 
 .mercury-wrapper{
   width: 250px;
-}
-
-h1{
+} */
+h1 {
   color: aliceblue;
 }
 
-.img-wrapper:active{
+.sun-wrapper:active {
   width: 230px;
+  height: 230px;
 }
-img{
+/* .sun-img{
+  width: 100px;
+  height: 100px;
+  animation: rotate 20s linear infinite;
+} */
+img {
   width: 100%;
   height: 100%;
-  
 }
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,16 +72,15 @@ img{
   height: 100vh;
 }
 
-.background-container{
+.background-container {
   position: relative;
-  
 }
-.bg{
+.bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1; /* this ensures bg img is behind the content */
-}
+   z-index: -1;/*this ensures bg img is behind the content */
+} 
 .store {
   position: absolute;
   top: 0;
@@ -64,7 +93,7 @@ img{
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-left: 5px solid orange;
-  z-index: 10; /* Ensure the store appears above the background */
+  z-index: 0; /* the store appears above the background */
 }
 
 .store h1 {
@@ -100,22 +129,16 @@ img{
   margin-left: 12px;
 }
 
-.name h2{
+.name h2 {
   color: black;
   font-size: 14px;
   margin: 0;
 }
-.name p{
+.name p {
   color: rgb(53, 41, 41);
   font-size: 12px;
   margin: 0;
 }
-.planet{
+.planet {
   margin-top: 20px;
 }
-.sun-img{
-  width: 100px;
-  height: 100px;
-  animation: rotate 20s linear infinite;
-}
-
