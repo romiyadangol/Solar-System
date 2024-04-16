@@ -1,4 +1,9 @@
-@keyframes rotate {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
@@ -9,57 +14,54 @@
 
 .img-wrapper {
   display: flex;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 120vh;
+  height: 100vh;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in;
 }
-/* .img-wrapper{
-  display: flex;
-   justify-content: space-between;
- } */
 .sun-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  animation: rotate 50s linear infinite;
+  width: 250px;
+  height: 250px;
+  transition: transform 0.15s ease-in;
+  z-index: 9;
+  border-radius: 50%;
 }
+.sun-wrapper:active{
+  transform: scale(0.9);
+}
+.sun-image{
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  animation: rotation 40s infinite linear;
 
+}
 .mercury-wrapper {
-  display: flex;
-  width: 300px;
-  height: 300px;
-  justify-content: center;
-  align-items: center;
-  animation: rotate 20s linear infinite;
-  transform-origin: -20% 40%;
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	z-index: 4;
+	top: calc(50% - 200px);
+	border-radius: 100%;
+	animation: rotation 23.6s linear infinite;
 }
 .mercury-image {
-  width: 90px;
-  height: 90px;
-}
-/* .mercury-image {
-  width: 200px;
-  height: 200px;
-  animation: rotate 20s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 40px;
+	width: 40px;
+	margin-top: -20px;	
+	animation: rotation 12s linear infinite;
 }
 
-.mercury-wrapper{
-  width: 250px;
-} */
 h1 {
   color: aliceblue;
 }
 
-.sun-wrapper:active {
-  width: 230px;
-  height: 230px;
-}
-/* .sun-img{
-  width: 100px;
-  height: 100px;
-  animation: rotate 20s linear infinite;
-} */
 img {
   width: 100%;
   height: 100%;
@@ -79,7 +81,7 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-   z-index: -1;/*this ensures bg img is behind the content */
+   z-index: -1;
 } 
 .store {
   position: absolute;
@@ -93,7 +95,7 @@ img {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-left: 5px solid orange;
-  z-index: 0; /* the store appears above the background */
+  z-index: 0; 
 }
 
 .store h1 {
@@ -111,8 +113,6 @@ img {
   display: flex;
   align-items: center;
   background-color: gray;
-  /* padding-left: 30px;
-  padding-right: 30px; */
   border: none;
   border-radius: 5px;
   cursor: pointer;
