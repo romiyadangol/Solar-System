@@ -50,25 +50,25 @@ class App extends React.Component {
     }
   };
 
-  handleBuyPlanet = () => {
-    console.log("Counter:", this.state.counter);
-    console.log("Mercury Cost:", this.state.planets.mercuryCost);
+  // handleBuyPlanet = () => {
+  //   console.log("Counter:", this.state.counter);
+  //   console.log("Mercury Cost:", this.state.planets.mercuryCost);
 
-    if (
-      !this.state.planets.mercuryPurchased &&
-      this.state.counter >= this.state.planets.mercuryCost
-    ) {
-      console.log("Buying Mercury!");
-      this.setState({
-        counter: this.state.counter - this.state.planets.mercuryCost,
-        mercuryPurchased: true,
-      });
-      alert("Item purchased!");
-    } else {
-      console.log("Already purchased!");
-      alert("Already purchased");
-    }
-  };
+  //   if (
+  //     !this.state.planets.mercuryPurchased &&
+  //     this.state.counter >= this.state.planets.mercuryCost
+  //   ) {
+  //     console.log("Buying Mercury!");
+  //     this.setState({
+  //       counter: this.state.counter - this.state.planets.mercuryCost,
+  //       mercuryPurchased: true,
+  //     });
+  //     alert("Item purchased!");
+  //   } else {
+  //     console.log("Already purchased!");
+  //     alert("Already purchased");
+  //   }
+  // };
 
   render() {
     return (
@@ -106,7 +106,7 @@ class App extends React.Component {
             </button>
           </div>
 
-          <div className="planet">
+          {/* <div className="planet">
             <button
               type="button"
               className="upgrade"
@@ -118,7 +118,7 @@ class App extends React.Component {
                 <p>Cost: {this.state.planets.mercuryCost} SE</p>
               </div>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     );
